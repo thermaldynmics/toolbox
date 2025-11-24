@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <ul class="nav-list">
+   <li><a href="https://www.boschtools.com/us/en/">Home</a></li>
+   <li><a href="https://www.boschtools.com/us/en/service/">Service information</a></li>
+   <li><a href="https://www.boschtools.com/us/en/service/product-warranty/">Contact Vender</a></li>
+     </ul>
+    </nav>
+
+  <meta charset="UTF-8">
+  <title>Tool Selector and Times</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+h1 {
+  font-size: 75px;
+  background-image: url("images/toolkit.jpeg");
+  background-size: cover;       /* makes the image cover the heading */
+  background-position: center;  /* centers the image */
+  padding: 40px;                /* adds space so the background is visible */
+  color: #B4E50D;                 /* text color for contrast */
+  text-shadow: 2px 2px 5px black; /* optional, improves readability */
+}
+
+
+    h2 {
+      color: DarkSlateGray;
+    }
+    img {
+      width: 250px;
+      border: 2px solid #ccc;
+      padding: 10px;
+      display: none;
+      margin-top: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 2px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    input[type="time"], input[type="text"] {
+      width: 90%;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>
+  <img src="toolkit.jpg" alt="Toolkit" style="float:right; width:100px; margin-left:20px;">
+  Welcome to the tool shed!
+</h1>
+
+
+<h2>Select a Tool</h2>
+<label for="tools">Choose your tool:</label>
+<select id="tools" onchange="showToolImage()">
+  <option value="">-- Choose a tool --</option>
+  <option value="screwdriver">Screwdriver</option>
+  <option value="pliers">Pliers</option>
+  <option value="wrench">Wrench</option>
+  <option value="hammer">Hammer</option>
+</select>
+
+<img id="toolImage" src="" alt="Selected Tool">
+
+<script>
+function showToolImage() {
+  const tool = document.getElementById("tools").value;
+  const img = document.getElementById("toolImage");
+
+  if (!tool) {
+    img.style.display = "none";
+    img.src = "";
+    return;
+  }
+
+  const images = {
+    screwdriver: "images/screwdriver.jpg",
+    pliers: "images/pliers.png",
+    hammer: "images/hammer.jpg",
+    wrench: "images/wrench.jpg"
+  };
+
+  img.src = images[tool];
+  img.style.display = "block";
+}
+</script>
+<img src="toolkit.jpeg" alt="toolbox" style="width:42px;height:42px;">
+<h2>Tool Usage Times</h2>
+<p style="font-size:20px;">Please fill out the times when you take tools for the job.</p>
+
+<table>  <tr>
+    <th>Tool</th>
+    <th>Time Taken (Start)</th>
+    <th>Time Returned (End)</th>
+    <th>Your Name</th>
+  </tr>
+  <tr>
+    <td>Screwdriver</td>
+    <td><input type="time" name="screwdriver_start"></td>
+    <td><input type="time" name="screwdriver_end"></td>
+    <td><input type="text" name="screwdriver_name" placeholder="Your Name"></td>
+  </tr>
+  <tr>
+    <td>Pliers</td>
+    <td><input type="time" name="pliers_start"></td>
+    <td><input type="time" name="pliers_end"></td>
+    <td><input type="text" name="pliers_name" placeholder="Your Name"></td>
+  </tr>
+  <tr>
+    <td>Hammer</td>
+    <td><input type="time" name="hammer_start"></td>
+    <td><input type="time" name="hammer_end"></td>
+    <td><input type="text" name="hammer_name" placeholder="Your Name"></td>
+  </tr>
+  <tr>
+    <td>Wrench</td>
+    <td><input type="time" name="wrench_start"></td>
+    <td><input type="time" name="wrench_end"></td>
+    <td><input type="text" name="wrench_name" placeholder="Your Name"></td>
+  </tr>
+</table>
+
+<h1>
+  <img src=""C:\Users\kelle\OneDrive\Documents\GitHub\Toolbox\images\toolkit.jpeg"" alt="Toolkit" style="float:right; width:100px; margin-right:20px;">
+  Resources plus instructions and care for the tools are listed below
+</h1>
+
+<div style="display:flex; align-items:center;">
+  <img src="toolbox.jpg" alt="Toolbox Image" width="150" style="border:2px solid #ccc; padding:10px; margin-right:20px;">
+
+<ul class="nav-list">
+   <li><a href=https://www.carcarekiosk.com/">Your guide to a fast car repair</a></li>
+   <li><a href=https://mprtools.com/blogs/news/a-quick-guide-to-properly-maintaining-your-hand-tools?srsltid=AfmBOorTLFUIzB_0LwnljuIZ9go-WVVw8wIQZSKd862jSA4F1OYyU7OQ">A Quick Guide to Properly Maintaining Your Hand Tools</a></li>
+ 
+
+ 
+
+
+
+
+</body>
+</html>
